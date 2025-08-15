@@ -118,6 +118,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
           ),
         ),
         toolbarHeight: 65,
+        backgroundColor: colorTheme.surface,
         scrolledUnderElevation: 0,
         actions: [
           PopupMenuButton<String>(
