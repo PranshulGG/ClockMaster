@@ -926,7 +926,7 @@ class TimerScreenState extends State<TimerScreen> with WidgetsBindingObserver {
 
                               return Container(
                                 margin: EdgeInsets.only(
-                                  bottom: isLast ? 130 : 5,
+                                  bottom: isLast ? 130 : 8,
                                 ),
                                 padding: const EdgeInsets.only(
                                   top: 5,

@@ -135,7 +135,7 @@ class AlarmScreenState extends State<AlarmScreen> {
               ),
             )
           : ListView.builder(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.fromLTRB(10, 0, 10, 130),
               itemCount: alarms.length,
               itemBuilder: (context, i) {
                 final a = alarms[i];
@@ -170,9 +170,9 @@ class AlarmScreenState extends State<AlarmScreen> {
                         left: 16,
                         right: 16,
                         bottom: 10,
-                        top: 12,
+                        top: 10,
                       ),
-                      margin: EdgeInsets.only(bottom: isLast ? 130 : 5),
+                      margin: EdgeInsets.only(bottom: 8),
                       decoration: BoxDecoration(
                         color: a.enabled
                             ? colorTheme.surfaceContainerLow
