@@ -1,16 +1,16 @@
 <div align="center">
-   <img src="https://github.com/PranshulGG/WeatherMaster/blob/master/preview/readme_app_icon.svg" alt="" width="150px">
+   <img src="prev/app_icon.png" alt="" width="150px">
 </div>
 <h1 align="center">
- WeatherMaster
+ ClockMaster
 </h1>
    <div  align="center">
       <img src="https://img.shields.io/github/license/PranshulGG/ClockMaster?style=for-the-badge&color=cba6f7&labelColor=302D41">
       <img src="https://img.shields.io/github/last-commit/PranshulGG/ClockMaster?style=for-the-badge&color=b1d18a&labelColor=1f3701">
+      <br>
       <img src="https://img.shields.io/github/release/PranshulGG/ClockMaster?style=for-the-badge&color=dbc66e&labelColor=3a3000">
       <br>
 </a>
-
    </div>
 
  <div align="center">
@@ -38,12 +38,6 @@
 </div>
 
 <br>
-
-# 🌐 Translate the app on [Crowdin](https://crowdin.com/project/weathermaster/invite?h=448278a9b1370f3c10d4336a091dae792286917)
-
-- **Feel free to open an issue if you want to request a language**
-
-<a href="https://crowdin.com/project/weathermaster/invite?h=448278a9b1370f3c10d4336a091dae792286917"><img src="https://badges.crowdin.net/weathermaster/localized.svg" width="200"> </a>
 
 # ✉️ Contact
 
