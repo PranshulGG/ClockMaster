@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:fitsSystemWindows="false"
+    android:background="#1a1c16">
+
+    <TextView
+        android:id="@+id/alarm_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alarm"
+        android:layout_marginTop="10dp"
+        android:textSize="28sp"
+        android:textColor="#e2e3d8"
+        android:gravity="center"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/time_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/alarm_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:textColor="@android:color/white"
+            android:textSize="100sp"
+            android:includeFontPadding="false"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/alarm_minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="07"
+            android:textSize="100sp"
+            android:includeFontPadding="false"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    
+    <Button
+        android:id="@+id/btn_dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:text="Dismiss"
+        android:textColor="#1f3701"
+        android:height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="12dp"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_snooze"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rounded_button_snooze"
+        android:text="Snooze"
+        android:textColor="#bcece7"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="12dp"
+        android:height="100dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+</LinearLayout>
