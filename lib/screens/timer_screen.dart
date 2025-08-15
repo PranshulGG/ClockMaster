@@ -17,7 +17,6 @@ class TimerModel {
   bool isRunning;
   int? lastStartEpochMs;
 
-  // Add this
   final ValueNotifier<int> remainingNotifier;
 
   TimerModel({
@@ -115,13 +114,11 @@ class MyTaskHandler extends TaskHandler {
       }
     }
 
-    // update notification
     final runningTimers = data.where((e) => e['isRunning'] == true).toList();
     final pausedTimers = data
         .where((e) => e['isRunning'] == false && e['remainingSeconds'] > 0)
         .toList();
 
-    // Load last active timer ID
     final activeId = prefs.getString('activeTimerId');
 
     Map<String, dynamic>? t;
@@ -204,7 +201,6 @@ class MyTaskHandler extends TaskHandler {
         final idx = data.indexWhere((t) => t['id'] == m['id']);
 
         if (m['isRunning'] == true) {
-          // Stop it
           int lastStart =
               m['lastStartEpochMs'] ?? DateTime.now().millisecondsSinceEpoch;
           int elapsedSec =
@@ -217,7 +213,6 @@ class MyTaskHandler extends TaskHandler {
           m['isRunning'] = false;
           m['lastStartEpochMs'] = null;
         } else {
-          // Start it
           m['lastStartEpochMs'] = DateTime.now().millisecondsSinceEpoch;
           m['isRunning'] = true;
         }
@@ -362,17 +357,16 @@ class TimerScreenState extends State<TimerScreen> with WidgetsBindingObserver {
       for (final updated in incoming) {
         final idx = timers.indexWhere((t) => t.id == updated.id);
         if (idx != -1) {
-          timers[idx] = updated; // merge service update
+          timers[idx] = updated; 
         } else {
           timers.add(updated);
         }
       }
 
-      if (mounted) setState(() {}); // update UI immediately
+      if (mounted) setState(() {}); 
       return;
     }
 
-    // Handle timer ticks from service (optional, mostly background sync)
     if (data is Map &&
         data['type'] == 'timers_updated' &&
         data['timers'] != null) {
@@ -383,7 +377,6 @@ class TimerScreenState extends State<TimerScreen> with WidgetsBindingObserver {
       for (final updated in incoming) {
         final idx = timers.indexWhere((t) => t.id == updated.id);
         if (idx != -1) {
-          // Only update remainingSeconds if the UI hasn't already progressed further
           if (updated.remainingSeconds < timers[idx].remainingSeconds) {
             timers[idx].remainingSeconds = updated.remainingSeconds;
             timers[idx].isRunning = updated.isRunning;
@@ -534,7 +527,6 @@ class TimerScreenState extends State<TimerScreen> with WidgetsBindingObserver {
       text = 'Paused';
     }
 
-    // Update the service notification immediately
     await FlutterForegroundTask.updateService(
       notificationTitle: title,
       notificationText: text,
